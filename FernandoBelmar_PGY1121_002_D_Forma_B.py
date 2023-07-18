@@ -16,6 +16,25 @@ matriz_departamentos = np.array(lista_departamentos).reshape(filas, columnas)
 lista_ventas = [0, 0, 0, 0]  # [A][B][C][D]
 cantidad_ventas = [0, 0, 0, 0]  # [A][B][C][D]
 
+def mensaje_bienvenida():    
+    print("╔═════════════════════════════════╗")
+    print("║        Bienvenido a la          ║")
+    print("║     Inmobiliaria Casa Feliz     ║")
+    print("╚═════════════════════════════════╝")
+    
+
+def print_menu():
+    print("╔═════════════════════════════════╗")
+    print("║           MENÚ PRINCIPAL        ║")
+    print("╠═════════════════════════════════╣")
+    print("║ 1) Comprar departamento         ║")
+    print("║ 2) Mostrar departamentos        ║")
+    print("║    disponibles                  ║")
+    print("║ 3) Ver listado de compradores   ║")
+    print("║ 4) Mostrar ganancias totales    ║")
+    print("║ 5) Salir                        ║")
+    print("╚═════════════════════════════════╝")
+
 def mensaje_error():
     print("El dato que ha ingresado es inválido o se han cometido demasiados errores. Por favor inténtelo de nuevo. ")
 
@@ -109,9 +128,9 @@ def ventas_totales():
 # Menu
 
 menu_activo = True
-print("Bienvenido a la inmobiliaria Casa Feliz. Estas son sus opciones:\n")
+mensaje_bienvenida()
 while menu_activo:
-    print("1) Comprar departamento\n2) Mostrar departamentos disponibles\n3) Ver listado de compradores\n4) Mostrar ganancias totales\n5) Salir")
+    print_menu()
     try:
         opcion = int(input("Su opción:\n"))
         match opcion:
